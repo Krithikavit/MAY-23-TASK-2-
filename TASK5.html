@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+
+        .inline-input {
+            display: inline-block;
+            width: 48%;
+        }
+
+            .inline-input + .inline-input {
+                margin-left: 4%;
+            }
+
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+            .checkbox-group input {
+                margin-right: 8px;
+            }
+
+        .gender-options {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Doctor Appointment Form</h1>
+    <form>
+        <label for="date">Appointment Date</label>
+        <input type="date" id="date" name="date">
+
+        <label for="time">Appointment Time</label>
+        <input type="time" id="time" name="time">
+
+        <label>Name</label>
+        <div class="inline-input">
+            <input type="text" placeholder="First" name="firstName">
+        </div>
+        <div class="inline-input">
+            <input type="text" placeholder="Last" name="lastName">
+        </div>
+
+        <label>Gender</label>
+        <div class="gender-options">
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+        </div>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label>Address</label>
+        <div class="inline-input">
+            <input type="text" placeholder="City" name="city">
+        </div>
+        <div class="inline-input">
+            <input type="text" placeholder="State" name="state">
+        </div>
+
+        <label for="query">Your Query</label>
+        <textarea id="query" name="query" rows="4"></textarea>
+
+        <label>Appointment Type</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="appointmentType" value="cervix"> Cervix checkup<br>
+            <input type="checkbox" name="appointmentType" value="heart"> Heart checkup<br>
+            <input type="checkbox" name="appointmentType" value="eye"> Eye check-up<br>
+            <input type="checkbox" name="appointmentType" value="hearing"> Hearing Test<br>
+        </div>
+
+        <input type="submit" value="Send">
+    </form>
+
+</body>
+</html>
